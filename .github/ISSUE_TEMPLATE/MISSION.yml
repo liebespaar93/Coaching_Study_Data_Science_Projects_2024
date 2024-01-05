@@ -1,0 +1,45 @@
+name: "🚀 미션 제출"
+description: "미션 제출에 대한 보고서입니다"
+title: "🚀 "
+labels: ["🚀 미션"]
+projects: ["liebespaar93/projects/6"]
+assignees:
+  - liebespaar93
+body:
+  - type: input
+    id: input_name
+    attributes:
+      label: 📣 미션 주차
+      description: 💭 미션의 주차을 작성해 주세요
+      placeholder: 🫧 <이름>
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        # 미션 완료 보고서
+        완료한 파일 링크를 작성해 주세요
+  - type: textarea
+    id: textarea_description
+    attributes:
+      label: 📣 미션 메모
+      description: 💭 미션 진행중 공유하면 좋을내용 혹은 질문사항
+      placeholder: |
+        🫧 <미션 메모>
+        1. <메모>
+        2. <메모>
+      render: ''
+    validations:
+      required: false
+  - type: checkboxes
+    id: checkboxes_list
+    attributes:
+      label: 📣 작성자 체크리스트
+      description: 💭 작성자 체크리스트
+      options:
+        - label: 🔱 미션 작성을 적절하게 작성였습니까?
+          required: false
+        - label: 📍 타이틀에 주차를 작성하였습니까?
+          required: true
+        - label: 📌 작성자는 모든 작업에 대한 정보가 공개됨을 동의함니까?
+          required: true
