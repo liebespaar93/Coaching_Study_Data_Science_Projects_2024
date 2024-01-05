@@ -18,7 +18,14 @@ body:
     attributes:
       value: |
         # 미션 완료 보고서
-        완료한 파일 링크를 작성해 주세요
+  - type: input
+    id: input_file
+    attributes:
+      label: 📣 미션 파일 작성
+      description: 💭 미션 파일 위치 작성
+      placeholder: 🫧 <파일주소>
+    validations:
+      required: true
   - type: textarea
     id: textarea_description
     attributes:
